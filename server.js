@@ -8,8 +8,9 @@ const register = require("./controllers/register");
 const db = knex({
     client: 'pg',
     connection: {
-      host : process.env.DATABASE_URL,
-      ssl: true
+        connectionString: process.env.DATABASE_URL,
+        ssl: true
+      /* host : '127.0.0.1', */
       /* user : 'postgres',
       password : 'fishes12',
       database : 'smartbrain' */
